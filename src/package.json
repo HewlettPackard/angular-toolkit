@@ -1,7 +1,7 @@
 {
 	"name": "@hpe/angular-toolkit",
 	"description": "Hewlett-Packard Enterprise : Angular toolkit for rapid project development",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "MIT",
 	"private": false,
 	"repository": "https://github.com/HewlettPackard/angular-toolkit",
