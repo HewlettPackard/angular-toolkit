@@ -5,7 +5,6 @@
 	"license": "MIT",
 	"private": false,
 	"repository": "https://github.com/HewlettPackard/angular-toolkit",
-
 	"bugs": {
 		"url": "https://github.hpe.com/HewlettPackard/angular-toolkit/issues"
 	},

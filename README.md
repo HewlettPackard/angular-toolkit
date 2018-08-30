@@ -5,7 +5,10 @@ The goal is to group commonly used code in order to reduce the development effor
 projects and to ease the move of developers from one project to another.
 
 To creare the toolkit package:
-	npm run build
-
+```bash
+npm run build
+```
 To publish the package on npmjs registry:
-	npm publish src/dist/
+```bash
+npm publish src/dist/
+```
