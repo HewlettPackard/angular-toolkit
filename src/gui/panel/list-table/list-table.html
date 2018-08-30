@@ -1,0 +1,77 @@
+<!--
+=============================================================================
+===
+=== (C) Copyright 2018 Hewlett Packard Enterprise Development LP.
+===
+=== Use of this source code is governed by an MIT-style license that can be
+=== found in the LICENSE file
+=============================================================================
+-->
+
+<p-table #tt
+		[columns]                = "displayColumns"
+		[value]                  = "displayData"
+		[dataKey]                = "rowId"
+		[selectionMode]          = "multiSelection ? 'multiple' : 'single'"
+		[paginator]              = "true"
+		[rows]                   = "rowsPerPage"
+		[rowsPerPageOptions]     = "rowSet"
+		[pageLinks]              = "10"
+		[loading]                = "loading"
+		[metaKeySelection]       = "true"
+		[contextMenu]            = "cm"
+		[(selection)]            = "selectedRow"
+		(onRowSelect)            = "onRowSelect($event)"
+		(onRowUnselect)          = "onRowUnselect($event)"
+		contextMenuSelectionMode = "joint"
+		(onContextMenuSelect)    = "onContextMenuSelect($event)"
+		(onFilter)               = "onFilter($event)">
+
+	<ng-template pTemplate="header" let-columns>
+		<tr>
+			<th *ngFor="let col of columns" [pSortableColumn]="col.field">
+				{{col.displayHeader}}
+				<p-sortIcon [field]="col.field"></p-sortIcon>
+			</th>
+		</tr>
+
+		<tr class="ui-fluid">
+			<th *ngFor="let col of columns">
+
+				<input          *ngIf="col.filter == null"
+								pInputText
+								type    = "text"
+								(input) = "filter($event.target.value, col)">
+
+				<p-dropdown     *ngIf = "col.filter == 'select'"
+								[options]  = "columnValues.get(col.field)"
+								[style]    = "{'width':'100%'}"
+								(onChange) = "filter($event.value, col)"></p-dropdown>
+
+				<p-multiSelect  *ngIf = "col.filter == 'list'"
+								[options]      = "columnValues.get(col.field)"
+								[defaultLabel] = "allValue"
+								(onChange)     = "filter($event.value, col)"></p-multiSelect>
+
+			</th>
+		</tr>
+	</ng-template>
+
+	<ng-template pTemplate="body" let-row let-columns="columns">
+		<tr [pSelectableRow]="row" [pContextMenuRow]="row">
+			<td *ngFor="let col of columns">
+				<span [ngClass]="row[col.field].style">{{row[col.field]}}</span>
+			</td>
+		</tr>
+	</ng-template>
+
+	<ng-template pTemplate="emptymessage" let-columns>
+		<tr>
+			<td [attr.colspan]="columns.length">
+				{{noRecords}}
+			</td>
+		</tr>
+	</ng-template>
+</p-table>
+
+<p-contextMenu #cm [model]="activeMenu" appendTo="body"></p-contextMenu>

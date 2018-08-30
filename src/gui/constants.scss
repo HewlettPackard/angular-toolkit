@@ -1,0 +1,54 @@
+//=============================================================================
+//===
+//=== (C) Copyright 2018 Hewlett Packard Enterprise Development LP.
+//===
+//=== Use of this source code is governed by an MIT-style license that can be
+//=== found in the LICENSE file
+//=============================================================================
+
+//--- HPE standard palette
+
+$colorSlate    : #425563;
+$colorTurquoise: #2AD2C9;
+$colorOrange   : #FF8D6D;
+$colorPurple   : #614767;
+$colorDarkSteel: #5F7A76;
+$colorGray     : #C6C9CA;
+$colorGreen    : #00A982;
+$colorBronze   : #80746E;
+$colorDarkGray : #808285;
+
+//--- HPE surrogate palette
+
+$colorDarkBronze : #70645E;
+
+//--- Other colors
+
+$colorText : #202020;
+
+//--- TitlePanel constants
+
+$titleBackground : #EBEDF0;
+$titleHeight     : 46px;
+$titleFont       : 1.4rem;
+$titleColor      : $colorSlate;
+
+//--- Icons
+
+$iconColor : $colorSlate;
+$iconSize  : 24px;
+
+//--- Forms
+
+$formBackgroundColor : #FAFAFA;
+$formLabelWidth      : 12rem;
+$formVerticalSpacing :  1rem;
+$formMandatoryColor  : $colorOrange;
+$formProvidedColor   : $colorGreen;
+
+//--- Toolbar
+
+$toolbarBackground   : $colorSlate;
+$toolbarColor        : white;
+
+//=============================================================================

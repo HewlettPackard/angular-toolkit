@@ -1,0 +1,32 @@
+<!--
+=============================================================================
+===
+=== (C) Copyright 2018 Hewlett Packard Enterprise Development LP.
+===
+=== Use of this source code is governed by an MIT-style license that can be
+=== found in the LICENSE file
+=============================================================================
+-->
+
+<hpe-card-panel icon="fa-sign-in-alt" [title]="title" [toggleButton]="false">
+	<div cpBody>
+		<hpe-form-panel>
+
+			<hpe-form-column width="500px">
+				<hpe-input-text icon="fa-user" [label]="username" [(ngModel)]="cred.username" required></hpe-input-text>
+				<hpe-input-text icon="fa-key"  [label]="password" [(ngModel)]="cred.password" required></hpe-input-text>
+			</hpe-form-column>
+
+		</hpe-form-panel>
+
+		<hpe-button-panel>
+			<div class="spinner" *ngIf="httpService.loading">
+				<i class="fa fa-spinner fa-pulse"></i>
+			</div>
+			<button mat-button hpeButton (click)="login()">{{button}}</button>
+		</hpe-button-panel>
+	</div>
+</hpe-card-panel>
+
+
+

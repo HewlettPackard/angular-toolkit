@@ -1,0 +1,33 @@
+{
+	"card-panel" : {
+		"toggle.tooltip" : "Apre o chiude il pannello"
+	},
+
+	"login-panel" : {
+		"title"    : "Login",
+		"username" : "Nome utente",
+		"password" : "Password",
+		"button"   : "Login",
+
+		"missing.info": {
+			"title" : "Informazioni mancanti",
+			"descr" : "Fornire un nome utente o una password prima"
+		},
+
+		"login.error": {
+			"title" : "Errore durante il login",
+			"descr" : "Il nome utente o la password non sono validi"
+		}
+	},
+
+	"list-panel" : {
+		"exportSel.tooltip" : "Esporta le righe selezionate",
+		"exportAll.tooltip" : "Esporta tutte le righe",
+		"refresh.tooltip"   : "Aggiorna"
+	},
+
+	"list-table" : {
+		"noRecords" : "Non ci sono record",
+		"all"       : "Tutti"
+	}
+}

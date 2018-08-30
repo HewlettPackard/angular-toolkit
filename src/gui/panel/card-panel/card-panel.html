@@ -1,0 +1,32 @@
+<!--
+=============================================================================
+===
+=== (C) Copyright 2018 Hewlett Packard Enterprise Development LP.
+===
+=== Use of this source code is governed by an MIT-style license that can be
+=== found in the LICENSE file
+=============================================================================
+-->
+
+<mat-card>
+	<hpe-title-panel icon="{{icon}}" title="{{title}}" >
+		<ng-content select="[cpPostTitle]" tpPostTitle></ng-content>
+
+		<ng-content select="[cpControl]" tpControl></ng-content>
+
+		<button mat-button *ngIf="toggleButton" (click)="onToggleClick()" [title]="tooltip" tpControl class="buttonStyle">
+			<hpe-title-icon name="fa-angle-up"   *ngIf="cardOpen"></hpe-title-icon>
+			<hpe-title-icon name="fa-angle-down" *ngIf="!cardOpen"></hpe-title-icon>
+		</button>
+
+	</hpe-title-panel>
+
+	<div [@focusPanel]      = "state"
+		 (@focusPanel.start)= "animationStart($event)"
+		 (@focusPanel.done) = "animationEnd($event)"
+		 [style.overflow]   = "overflowUnset ? 'unset' : 'hidden'">
+
+		<ng-content select="[cpBody]"></ng-content>
+	</div>
+
+</mat-card>

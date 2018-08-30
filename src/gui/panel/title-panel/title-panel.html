@@ -1,0 +1,21 @@
+<!--
+=============================================================================
+===
+=== (C) Copyright 2018 Hewlett Packard Enterprise Development LP.
+===
+=== Use of this source code is governed by an MIT-style license that can be
+=== found in the LICENSE file
+=============================================================================
+-->
+
+<mat-toolbar class="toolbar">
+
+	<hpe-title-icon [name]="icon"></hpe-title-icon>
+	<div class="panelTitle">{{title}}</div>
+	<ng-content select="[tpPostTitle]"></ng-content>
+
+	<span class="horizFiller"></span>
+
+	<ng-content select="[tpControl]"></ng-content>
+
+</mat-toolbar>

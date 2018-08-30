@@ -1,0 +1,27 @@
+//=============================================================================
+//===
+//=== (C) Copyright 2018 Hewlett Packard Enterprise Development LP.
+//===
+//=== Use of this source code is governed by an MIT-style license that can be
+//=== found in the LICENSE file
+//=============================================================================
+
+@import "../../../constants";
+
+//=============================================================================
+
+.logoContainer {
+	height     : 100%;
+	display    : flex;
+	align-items: center;
+}
+
+//=============================================================================
+
+.logo {
+	vertical-align: middle;
+	padding-left  : 8px;
+	padding-right : 8px;
+}
+
+//=============================================================================

@@ -1,0 +1,28 @@
+//=============================================================================
+//===
+//=== (C) Copyright 2018 Hewlett Packard Enterprise Development LP.
+//===
+//=== Use of this source code is governed by an MIT-style license that can be
+//=== found in the LICENSE file
+//=============================================================================
+
+@import "../../constants";
+
+//=============================================================================
+
+mat-card {
+	margin : 1rem;
+	padding:  0px;
+}
+
+//=============================================================================
+
+.buttonStyle {
+	min-width      : 0px;
+	padding-top    : 0px;
+	padding-bottom : 0px;
+	padding-left   : 8px;
+	padding-right  : 8px;
+}
+
+//=============================================================================

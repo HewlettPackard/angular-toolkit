@@ -1,0 +1,43 @@
+//=============================================================================
+//===
+//=== (C) Copyright 2018 Hewlett Packard Enterprise Development LP.
+//===
+//=== Use of this source code is governed by an MIT-style license that can be
+//=== found in the LICENSE file
+//=============================================================================
+
+@import "../../constants";
+
+//=============================================================================
+
+.spacing {
+	margin-bottom: $formVerticalSpacing;
+}
+
+//=============================================================================
+
+.control {
+	width       : 100%;
+	margin-top  :  4px;
+	margin-left : 10px;
+}
+
+//=============================================================================
+
+.required {
+	border-right: 5px solid $formMandatoryColor;
+}
+
+//=============================================================================
+
+.provided {
+	border-right: 5px solid $formProvidedColor;
+}
+
+//=============================================================================
+
+:host ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+	background-color: $colorBronze;
+}
+
+//=============================================================================

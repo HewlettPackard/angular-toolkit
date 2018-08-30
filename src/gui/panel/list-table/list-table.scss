@@ -1,0 +1,95 @@
+//=============================================================================
+//===
+//=== (C) Copyright 2018 Hewlett Packard Enterprise Development LP.
+//===
+//=== Use of this source code is governed by an MIT-style license that can be
+//=== found in the LICENSE file
+//=============================================================================
+
+@import "../../constants";
+
+//=============================================================================
+
+.cell {
+	width         : 100%;
+	display       : inline-block;
+	padding       : 0.70em;
+	overflow      : hidden;
+	text-overflow : ellipsis;
+	white-space   : nowrap;
+}
+
+//=============================================================================
+
+.alignLeft {
+	text-align: left;
+}
+
+//=============================================================================
+
+.alignCenter {
+	text-align: center;
+}
+
+//=============================================================================
+
+.alignRight {
+	text-align: right;
+}
+
+//=============================================================================
+
+:host ::ng-deep .ui-paginator {
+	border           : none;
+	background-image : inherit;
+}
+
+//=============================================================================
+
+:host ::ng-deep .ui-table .ui-table-thead > tr > th {
+	border : none;
+}
+
+//=============================================================================
+
+:host ::ng-deep .ui-table .ui-table-thead > tr > th:not(.ui-state-highlight) {
+	background-color : white;
+}
+
+//=============================================================================
+//--- Color when the mouse goes over the header
+
+:host ::ng-deep .ui-table .ui-table-thead > tr > th:hover {
+	background-color : #C6C9CA;
+}
+
+//=============================================================================
+//--- Color of selected row
+
+:host ::ng-deep .ui-table .ui-table-tbody > tr.ui-state-highlight {
+	background-color: #A0C0C0;
+}
+
+//=============================================================================
+//--- Border between header and rows
+
+:host ::ng-deep .ui-table .ui-table-thead > tr:last-child {
+	border-bottom: 2px solid #C6C9CA;
+}
+
+//=============================================================================
+//--- Color of the header during sorting
+
+:host ::ng-deep .ui-table .ui-sortable-column.ui-state-highlight {
+	background-color: #5F7A76;
+}
+
+//=============================================================================
+//--- Removes left and right borders to each data row
+
+:host ::ng-deep .ui-table .ui-table-tbody > tr > td {
+	border-left  : none;
+	border-right : none;
+}
+
+//=============================================================================

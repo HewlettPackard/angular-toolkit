@@ -1,0 +1,52 @@
+//=============================================================================
+//===
+//=== (C) Copyright 2018 Hewlett Packard Enterprise Development LP.
+//===
+//=== Use of this source code is governed by an MIT-style license that can be
+//=== found in the LICENSE file
+//=============================================================================
+
+@import "../../../constants";
+
+//=============================================================================
+
+.button {
+	min-width : 100%;
+	height    : 100%;
+	color     : $toolbarColor;
+}
+
+//=============================================================================
+
+.selected {
+	background-color: rgba(black, 0.2);
+}
+
+//=============================================================================
+
+:host .highlighted {
+	color: $colorOrange;
+}
+
+//=============================================================================
+
+:host .disabled {
+	color: $colorGray;
+}
+
+//=============================================================================
+//--- Overcomes a bug that prevents the p-overlayPanel from showing
+
+:host ::ng-deep .ui-overlaypanel {
+	display : block !important;
+}
+
+//=============================================================================
+
+:host ::ng-deep .ui-overlaypanel-content {
+	max-height: 30rem;
+	overflow-y: auto;
+	padding   : 0;
+}
+
+//=============================================================================

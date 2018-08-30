@@ -1,0 +1,85 @@
+//=============================================================================
+//===
+//=== (C) Copyright 2018 Hewlett Packard Enterprise Development LP.
+//===
+//=== Use of this source code is governed by an MIT-style license that can be
+//=== found in the LICENSE file
+//=============================================================================
+
+@import "../../constants";
+
+//=============================================================================
+//=== Border elimination
+//=============================================================================
+
+:host ::ng-deep .ui-widget-content {
+	border : none;
+}
+
+//=============================================================================
+
+:host ::ng-deep .ui-state-default {
+	border : none;
+}
+
+//=============================================================================
+
+:host ::ng-deep .ui-panelmenu-header.ui-state-active a {
+	background-color: $colorSlate;
+}
+
+//=============================================================================
+//=== Background of top level menu
+//=============================================================================
+
+//:host ::ng-deep .ui-panelmenu .ui-panelmenu-header {
+//	background-color: $colorBronze;
+//}
+
+//=============================================================================
+
+//:host ::ng-deep .ui-panelmenu .ui-panelmenu-header.ui-state-active {
+//	background-color: $colorBronze;
+//}
+
+//=============================================================================
+//=== Color of top level menu
+//=============================================================================
+
+//:host ::ng-deep .ui-panelmenu .ui-panelmenu-header a {
+//	color  : white;
+//}
+
+//=============================================================================
+
+//:host ::ng-deep .ui-panelmenu .ui-panelmenu-header .fa {
+//	color  : white;
+//}
+
+//=============================================================================
+//=== Handle hover cases
+//=============================================================================
+
+//:host ::ng-deep .ui-panelmenu .ui-panelmenu-header.ui-state-active:hover {
+//	background-color: $colorDarkBronze;
+//}
+
+//=============================================================================
+
+//:host ::ng-deep .ui-panelmenu .ui-panelmenu-header.ui-state-active:hover .fa {
+//	color: white;
+//}
+
+//=============================================================================
+
+//:host ::ng-deep .ui-panelmenu .ui-panelmenu-header:not(.ui-state-active):hover {
+//	background-color: $colorDarkBronze;
+//}
+
+//=============================================================================
+
+//:host ::ng-deep .ui-panelmenu .ui-panelmenu-header:not(.ui-state-active):hover .fa {
+//	color: white;
+//}
+
+//=============================================================================
