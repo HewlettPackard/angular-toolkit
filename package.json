@@ -1,0 +1,16 @@
+{
+	"name": "dummy",
+	"version": "0.0.0",
+	"scripts": {
+		"build": "ng-packagr -p src/ng-package.json && npm run copy && npm pack src/dist/",
+		"copy" : "cpx 'src/asset/**' 'src/dist/asset'"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"ng-packagr": "3.0.6",
+		"typescript": "2.6.2",
+		"@angular/compiler": "5.2.10",
+		"@angular/compiler-cli": "5.2.10",
+		"cpx": "1.5.0"
+	}
+}
