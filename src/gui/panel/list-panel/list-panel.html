@@ -14,21 +14,21 @@
 	<ng-content select="lpButtons"></ng-content>
 
 	<hpe-title-button   cpControl
-	                icon       = "fa-file-download"
+	                icon       = "fa-file-o"
 	                [tooltip]  = "exportSelTooltip"
 	                [disabled] = "loading || failed"
 	                (click)    = "lt.exportSelected()"
 					></hpe-title-button>
 
 	<hpe-title-button   cpControl
-					icon       = "fa-file-download"
+					icon       = "fa-files-o"
 					[tooltip]  = "exportAllTooltip"
 					[disabled] = "loading || failed"
 					(click)    = "lt.exportAll()"
 					></hpe-title-button>
 
 	<hpe-title-button   cpControl
-					icon       = "fa-sync"
+					icon       = "fa-refresh"
 					[tooltip]  = "refreshTooltip"
 					[disabled] = "loading"
 					(click)    = "refresh()"

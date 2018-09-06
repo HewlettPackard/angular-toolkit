@@ -56,7 +56,7 @@ export class Icon {
 		let styles : string[] = [ "iconStyle" ];
 
 		if (this.isFontAwesomeIcon()) {
-			styles.push("fas");
+			styles.push("fa");
 			styles.push(this.name);
 		}
 		else {

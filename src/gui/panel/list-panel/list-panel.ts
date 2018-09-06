@@ -115,19 +115,19 @@ export class ListPanel<T> implements OnInit {
 	//-------------------------------------------------------------------------
 
 	get exportSelTooltip() : string {
-		return this.labelService.getLabel("list-panel", "exportSel.tooltip");
+		return this.loc("exportSel.tooltip");
 	}
 
 	//-------------------------------------------------------------------------
 
 	get exportAllTooltip() : string {
-		return this.labelService.getLabel("list-panel", "exportAll.tooltip");
+		return this.loc("exportAll.tooltip");
 	}
 
 	//-------------------------------------------------------------------------
 
 	get refreshTooltip() : string {
-		return this.labelService.getLabel("list-panel", "refresh.tooltip");
+		return this.loc("refresh.tooltip");
 	}
 
 	//-------------------------------------------------------------------------
@@ -160,6 +160,16 @@ export class ListPanel<T> implements OnInit {
 
 	onRowUnselect(event : RowUnselectedEvent) {
 		this.onRowUnselected.emit(event.row);
+	}
+
+	//-------------------------------------------------------------------------
+	//---
+	//--- Private methods
+	//---
+	//-------------------------------------------------------------------------
+
+	private loc(code : string) : string {
+		return this.labelService.getLabel("list-panel", code);
 	}
 }
 

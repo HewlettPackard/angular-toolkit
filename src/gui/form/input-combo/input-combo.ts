@@ -35,11 +35,12 @@ export class InputCombo extends AbstractFormComponent {
 
 	@Input() key   : string;
 	@Input() value : string;
-	@Input() data  : Array<Object>;
+	@Input() data  : any[];
 
 	//-------------------------------------------------------------------------
 
 	private _selectedItem : any;
+	private _dataMap      : Object;
 
 	//-------------------------------------------------------------------------
 	//---
@@ -55,6 +56,47 @@ export class InputCombo extends AbstractFormComponent {
 	//---
 	//--- API methods
 	//---
+	//-------------------------------------------------------------------------
+
+	@Input()
+	get dataMap() : Object {
+		return this._dataMap;
+	}
+
+	//-------------------------------------------------------------------------
+
+	set dataMap(map : Object) {
+
+		this._dataMap = map;
+		this.key      = "id";
+		this.value    = "value";
+
+		let list = [];
+
+		if ( ! this.required) {
+			list.push( {
+				"id"    : null,
+				"value" : null
+			});
+		}
+
+		for (let key in map) {
+			let name  : any = Number(key);
+			let value : any = map[key];
+
+			if (isNaN(name)) {
+				name = key;
+			}
+
+			list.push( {
+				"id"    : name,
+				"value" : value
+			});
+		}
+
+		this.data = list;
+	}
+
 	//-------------------------------------------------------------------------
 
 	public writeValue(keyValue) {
@@ -83,6 +125,7 @@ export class InputCombo extends AbstractFormComponent {
 	//-------------------------------------------------------------------------
 
 	set selectedItem(newItem) {
+
 		this._selectedItem = newItem;
 		this.onChange(newItem[this.key]);
 	}

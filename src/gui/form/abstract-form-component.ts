@@ -25,8 +25,11 @@ export abstract class AbstractFormComponent implements ControlValueAccessor {
 
 	//-------------------------------------------------------------------------
 
-	private   _required : boolean;
-	protected onChange  : any;
+	private _required : boolean;
+
+	//-------------------------------------------------------------------------
+
+	protected onChange : any;
 
 	//-------------------------------------------------------------------------
 	//---
@@ -35,7 +38,8 @@ export abstract class AbstractFormComponent implements ControlValueAccessor {
 	//-------------------------------------------------------------------------
 
 	constructor() {
-		this.enabled = true;
+		this.enabled   = true;
+		this._required = false;
 	}
 
 	//-------------------------------------------------------------------------

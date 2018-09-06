@@ -77,25 +77,25 @@ export class LoginPanel extends AbstractSubscriber {
 	//-------------------------------------------------------------------------
 
 	get title() : string {
-		return this.labelService.getLabel("login-panel", "title");
+		return this.loc("title");
 	}
 
 	//-------------------------------------------------------------------------
 
 	get username() : string {
-		return this.labelService.getLabel("login-panel", "username");
+		return this.loc("username");
 	}
 
 	//-------------------------------------------------------------------------
 
 	get password() : string {
-		return this.labelService.getLabel("login-panel", "password");
+		return this.loc("password");
 	}
 
 	//-------------------------------------------------------------------------
 
 	get button() : string {
-		return this.labelService.getLabel("login-panel", "button");
+		return this.loc("button");
 	}
 
 	//-------------------------------------------------------------------------
@@ -119,6 +119,12 @@ export class LoginPanel extends AbstractSubscriber {
 
 	private areCredentialsValid() {
 		return Lib.str.isProvided(this.cred.username) && Lib.str.isProvided(this.cred.password);
+	}
+
+	//-------------------------------------------------------------------------
+
+	private loc(code : string) : string {
+		return this.labelService.getLabel("login-panel", code);
 	}
 }
 

@@ -56,25 +56,25 @@ import {LoginPanel}    from "./login/login";
 		HpeServiceModule
 	],
 	declarations: [
-		FormPanel,
 		FormColumn,
 		FormLabel,
+		FormPanel,
 		FormText,
-		InputText,
 		InputArea,
 		InputCheckbox,
 		InputCombo,
+		InputText,
 		LoginPanel
 	],
 	exports: [
-		FormPanel,
 		FormColumn,
 		FormLabel,
+		FormPanel,
 		FormText,
-		InputText,
 		InputArea,
 		InputCheckbox,
 		InputCombo,
+		InputText,
 		LoginPanel
 	],
 	providers: [
