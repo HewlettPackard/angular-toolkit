@@ -38,7 +38,7 @@ import {HpeServiceModule}     from "@hpe/angular-toolkit/service";
 
 import {ButtonPanel}          from "./button-panel/button-panel";
 import {CardPanel}            from "./card-panel/card-panel";
-import {GlobalCss}             from "./global-css/global-css";
+import {GlobalCss}            from "./global-css/global-css";
 import {Icon}                 from "./icon/icon";
 import {ListPanel}            from "./list-panel/list-panel";
 import {ListTable}            from "./list-table/list-table";
@@ -49,6 +49,7 @@ import {MenuPanel}            from "./menu-panel/menu-panel";
 import {MessageToast}         from "./message-toast/message-toast";
 import {NotificationButton}   from "./toolbar/notification-button/notification-button";
 import {NotificationItem}     from "./toolbar/notification-item/notification-item";
+import {RightTitle}           from "./right-title/right-title";
 import {RoundedText}          from "./rounded-text/rounded-text";
 import {TitleButton}          from "./title-panel/title-button/title-button";
 import {TitleIcon}            from "./title-panel/title-icon/title-icon";
@@ -86,6 +87,7 @@ import {UserButton}           from "./toolbar/user-button/user-button";
 		MessageToast,
 		NotificationButton,
 		NotificationItem,
+		RightTitle,
 		RoundedText,
 		TitleButton,
 		TitleIcon,
@@ -110,6 +112,7 @@ import {UserButton}           from "./toolbar/user-button/user-button";
 		MessageToast,
 		NotificationButton,
 		NotificationItem,
+		RightTitle,
 		RoundedText,
 		TitleButton,
 		TitleIcon,

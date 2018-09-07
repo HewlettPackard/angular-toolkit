@@ -29,5 +29,9 @@
 	"list-table" : {
 		"noRecords" : "Non ci sono record",
 		"all"       : "Tutti"
+	},
+
+	"right-title" : {
+		"close.tooltip" : "Chiudi"
 	}
 }

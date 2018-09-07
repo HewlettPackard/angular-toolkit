@@ -20,6 +20,7 @@ export {MenuButton}           from "./toolbar/menu-button/menu-button";
 export {MessageToast}         from "./message-toast/message-toast";
 export {NotificationButton}   from "./toolbar/notification-button/notification-button";
 export {NotificationItem}     from "./toolbar/notification-item/notification-item";
+export {RightTitle}           from "./right-title/right-title";
 export {RoundedText}          from "./rounded-text/rounded-text";
 export {TitleButton}          from "./title-panel/title-button/title-button";
 export {TitleIcon}            from "./title-panel/title-icon/title-icon";

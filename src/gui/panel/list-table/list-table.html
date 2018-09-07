@@ -41,17 +41,20 @@
 				<input          *ngIf="col.filter == null"
 								pInputText
 								type    = "text"
-								(input) = "filter($event.target.value, col)">
+								(input) = "filter($event.target.value, col)"
+								class   = "filter">
 
 				<p-dropdown     *ngIf = "col.filter == 'select'"
 								[options]  = "columnValues.get(col.field)"
 								[style]    = "{'width':'100%'}"
-								(onChange) = "filter($event.value, col)"></p-dropdown>
+								(onChange) = "filter($event.value, col)"
+								></p-dropdown>
 
 				<p-multiSelect  *ngIf = "col.filter == 'list'"
 								[options]      = "columnValues.get(col.field)"
 								[defaultLabel] = "allValue"
-								(onChange)     = "filter($event.value, col)"></p-multiSelect>
+								(onChange)     = "filter($event.value, col)"
+								class          = "filter"></p-multiSelect>
 
 			</th>
 		</tr>

@@ -29,5 +29,9 @@
 	"list-table" : {
 		"noRecords" : "No records found",
 		"all"       : "All"
+	},
+
+	"right-title" : {
+		"close.tooltip" : "Close"
 	}
 }
