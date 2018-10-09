@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"scripts": {
 		"build": "ng-packagr -p src/ng-package.json && npm run copy && npm pack src/dist/",
-		"copy" : "cpx 'src/asset/**' 'src/dist/asset'"
+		"copy": "cpx 'src/asset/**' 'src/dist/asset'"
 	},
 	"dependencies": {},
 	"devDependencies": {
