@@ -19,7 +19,7 @@ export {
 //=============================================================================
 
 export {
-	EventCallback, Menu,
+	EventCallback,
 	ListTableColumn, Transcoder, Styler, CellStyle,
 	DropdownItem,
 	RowSelectedEvent, RowUnselectedEvent, FilterChangeEvent,

@@ -19,7 +19,6 @@ import {AbstractSubscriber} from "./abstract-subscriber";
 import {EventBusService}    from "./eventbus-service";
 import {HttpService}        from "./http-service";
 
-
 //=============================================================================
 
 @Injectable()

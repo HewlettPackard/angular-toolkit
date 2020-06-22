@@ -11,17 +11,16 @@ import {CommonModule} from '@angular/common';
 
 //-----------------------------------------------------------------------------
 
-import {
-	MatToolbarModule, MatButtonModule, MatCardModule
-}
-from '@angular/material';
+import {MatCardModule}    from "@angular/material/card";
+import {MatButtonModule}  from "@angular/material/button";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 //-----------------------------------------------------------------------------
 
 import {
 	MessageModule, MessagesModule, OverlayPanelModule, PanelMenuModule
 }
-from "primeng/primeng";
+from "primeng";
 
 //-----------------------------------------------------------------------------
 

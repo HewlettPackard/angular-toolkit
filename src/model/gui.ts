@@ -15,19 +15,6 @@
 export type EventCallback = (event : any) => void;
 
 //=============================================================================
-
-export class Menu {
-	id?      : string;
-	icon?    : string;
-	label    : string;
-	expanded?: boolean;
-	disabled?: boolean;
-	visible? : boolean;
-	command? : EventCallback;
-	items?   : Menu[];
-}
-
-//=============================================================================
 //===
 //=== User interface objects
 //===

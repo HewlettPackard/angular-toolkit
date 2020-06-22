@@ -6,7 +6,7 @@
 //=== found in the LICENSE file
 //=============================================================================
 
-import {Menu} from "@hpe/angular-toolkit/model";
+import {MenuItem} from "primeng";
 
 //=============================================================================
 
@@ -18,19 +18,17 @@ export class MenuLib {
 	//---
 	//-------------------------------------------------------------------------
 
-	public clone(menu : Menu) : Menu {
+	public clone(menu : MenuItem) : MenuItem {
 
-		let m = new Menu();
+		let copy : MenuItem = {};
 
-		m.id       = menu.id;
-		m.icon     = menu.icon;
-		m.label    = menu.label;
-		m.expanded = menu.expanded;
-		m.command  = menu.command;
-		m.expanded = menu.expanded;
-		m.visible  = menu.visible;
+		for (let key in menu) {
+			if (menu.hasOwnProperty(key)) {
+				copy[key] = menu[key];
+			}
+		}
 
-		return m;
+		return copy;
 	}
 }
 

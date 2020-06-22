@@ -1,14 +1,28 @@
 {
 	"compilerOptions": {
-		"emitDecoratorMetadata"  : true,
-		"experimentalDecorators" : true,
 		"sourceMap"              : true,
+		"experimentalDecorators" : true,
+		"moduleResolution"       : "node",
+		"module": "esnext",
+		"target": "es2015",
+
+		"declaration": false,
+		"downlevelIteration": true,
+		"importHelpers": true,
+		"lib": [
+			"es2018",
+			"dom"
+		],
+
+		"emitDecoratorMetadata"  : true,
 		"noEmit"                 : true,
 		"watch"					 : true,
-		"module"                 : "commonjs",
-		"target"                 : "es5",
-		"moduleResolution"       : "node",
 		"types"                  : ["jasmine", "core-js"]
+	},
+
+	"angularCompilerOptions": {
+		"fullTemplateTypeCheck"    : true,
+		"strictInjectionParameters": true
 	},
 
 	"exclude": [

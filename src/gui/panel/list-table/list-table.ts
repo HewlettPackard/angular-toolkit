@@ -8,12 +8,12 @@
 
 import {Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild} from '@angular/core';
 
-import {ContextMenu, DataTable} from "primeng/primeng";
+import {ContextMenu, MenuItem, Table} from "primeng";
 
 import {AppEvent}           from "@hpe/angular-toolkit/model";
 import {CellStyle}          from "@hpe/angular-toolkit/model";
 import {DropdownItem}       from "@hpe/angular-toolkit/model";
-import {Menu}               from "@hpe/angular-toolkit/model";
+
 import {ListTableColumn}    from "@hpe/angular-toolkit/model";
 import {MenuSelector}       from "@hpe/angular-toolkit/model";
 import {FilterChangeEvent}  from "@hpe/angular-toolkit/model";
@@ -52,7 +52,7 @@ export class ListTable extends AbstractSubscriber implements OnChanges {
 	@Input() rowSet         : number[];
 	@Input() loading        : boolean;
 	@Input() labelGroup     : string;
-	@Input() contextMenu    : Menu[];
+	@Input() contextMenu    : MenuItem[];
 	@Input() menuSelector   : MenuSelector;
 
 	//-------------------------------------------------------------------------
@@ -63,7 +63,7 @@ export class ListTable extends AbstractSubscriber implements OnChanges {
 
 	//-------------------------------------------------------------------------
 
-	@ViewChild('tt') private pTable       : DataTable;
+	@ViewChild('tt') private pTable       : Table;
 	@ViewChild('cm') private pContextMenu : ContextMenu;
 
 	//-------------------------------------------------------------------------
@@ -71,7 +71,7 @@ export class ListTable extends AbstractSubscriber implements OnChanges {
 	selectedRow    : any;
 	displayColumns : ListTableColumn[];
 	displayData    : any[];
-	activeMenu     : Menu[];
+	activeMenu     : MenuItem[];
 
 	//--- Map containing for one column a list of (key, value) pairs. The key
 	//--- is the actual column's value while the value is the transcoded one.
@@ -500,13 +500,13 @@ export class ListTable extends AbstractSubscriber implements OnChanges {
 
 	//-------------------------------------------------------------------------
 
-	private selectMenuItems(menu : Menu[], rse : RowSelectedEvent, parentId : string) : Menu[] {
+	private selectMenuItems(menu : MenuItem[], rse : RowSelectedEvent, parentId : string) : MenuItem[] {
 
 		//--- Filter menu items depending on selector
 
-		let result : Menu[] = [];
+		let result : MenuItem[] = [];
 
-		menu.forEach((menu : Menu) => {
+		menu.forEach((menu : MenuItem) => {
 			let m = Lib.menu.clone(menu);
 
 			//--- Concatenate parentId

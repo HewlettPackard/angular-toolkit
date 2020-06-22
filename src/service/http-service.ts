@@ -9,7 +9,7 @@
 import {Injectable}   from "@angular/core";
 import {HttpClient}   from "@angular/common/http";
 import {DomSanitizer} from "@angular/platform-browser";
-import {SafeUrl}      from "@angular/platform-browser/src/security/dom_sanitization_service";
+import {SafeUrl}      from "@angular/platform-browser";
 
 import {Observable, throwError}    from "rxjs";
 import {catchError, map, finalize} from "rxjs/operators";

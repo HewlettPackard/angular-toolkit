@@ -35,11 +35,12 @@ export class InputCombo extends AbstractFormComponent {
 
 	@Input() key   : string;
 	@Input() value : string;
-	@Input() data  : any[];
+
+	data  : any[];
 
 	//-------------------------------------------------------------------------
 
-	private _selectedItem : any;
+	private _selectedItem : Object;
 	private _dataMap      : Object;
 
 	//-------------------------------------------------------------------------
@@ -95,11 +96,14 @@ export class InputCombo extends AbstractFormComponent {
 		}
 
 		this.data = list;
+		console.log("set data: "+ JSON.stringify(list));
 	}
 
 	//-------------------------------------------------------------------------
 
 	public writeValue(keyValue) {
+
+		console.log("writeValue: "+ JSON.stringify(keyValue));
 
 		let item = this.data.find( (item) => {
 			return (item[this.key] == keyValue)
@@ -118,13 +122,16 @@ export class InputCombo extends AbstractFormComponent {
 
 	//-------------------------------------------------------------------------
 
-	get selectedItem() : string {
+	get selectedItem() : Object {
+		console.log("get selectedItem: "+ JSON.stringify(this._selectedItem));
 		return this._selectedItem;
 	}
 
 	//-------------------------------------------------------------------------
 
-	set selectedItem(newItem) {
+	set selectedItem(newItem : Object) {
+
+		console.log("set selectedItem: "+ JSON.stringify(newItem));
 
 		this._selectedItem = newItem;
 		this.onChange(newItem[this.key]);

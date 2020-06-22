@@ -8,8 +8,9 @@
 
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
+import {MenuItem} from "primeng/api";
+
 import {ListTableColumn}    from "@hpe/angular-toolkit/model";
-import {Menu}               from "@hpe/angular-toolkit/model";
 import {ListBackendService} from "@hpe/angular-toolkit/model";
 import {FilterChangeEvent}  from "@hpe/angular-toolkit/model";
 import {MenuSelector}       from "@hpe/angular-toolkit/model";
@@ -41,7 +42,7 @@ export class ListPanel<T> implements OnInit {
 	@Input() columns        : ListTableColumn[];
 	@Input() visibleColumns : string[];
 	@Input() multiSelection : boolean;
-	@Input() contextMenu    : Menu[];
+	@Input() contextMenu    : MenuItem[];
 	@Input() menuSelector   : MenuSelector;
 	@Input() service        : ListBackendService<T>;
 	@Input() labelGroup     : string;

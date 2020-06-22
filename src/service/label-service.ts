@@ -116,7 +116,7 @@ export class LabelService {
 
 		let file : string = name +"-"+ language +".json";
 
-		this.httpService.getObject("asset/lang/"+ file)
+		this.httpService.getObject("assets/lang/"+ file)
 						.subscribe(	result => this.processFile(language, file, result),
 									error => console.log("Cannot load labels file : "+ file));
 	}

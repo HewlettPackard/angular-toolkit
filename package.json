@@ -1,16 +1,16 @@
 {
-	"name": "dummy",
-	"version": "0.0.0",
 	"scripts": {
 		"build": "ng-packagr -p src/ng-package.json && npm run copy && npm pack src/dist/",
-		"copy": "cpx 'src/asset/**' 'src/dist/asset'"
+		"copy": "cpx 'src/assets/**' 'src/dist/assets'"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"npm": "^6.14.5"
+	},
 	"devDependencies": {
-		"ng-packagr": "3.0.6",
-		"typescript": "2.6.2",
-		"@angular/compiler": "5.2.10",
-		"@angular/compiler-cli": "5.2.10",
+		"ng-packagr": "9.1.5",
+		"typescript": "3.8.3",
+		"@angular/compiler": "9.1.11",
+		"@angular/compiler-cli": "9.1.11",
 		"cpx": "1.5.0"
 	}
 }

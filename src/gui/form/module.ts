@@ -10,15 +10,11 @@ import {NgModule}     from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule}  from '@angular/forms';
 
-import {
-	MatCheckboxModule, MatButtonModule
-}
-from "@angular/material";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatButtonModule}   from "@angular/material/button";
 
-import {
-	DropdownModule, InputTextModule
-}
-from "primeng/primeng";
+import {DropdownModule}  from "primeng/dropdown";
+import {InputTextModule} from "primeng/inputtext";
 
 import {HpePanelModule}     from "@hpe/angular-toolkit/gui/panel";
 import {HpeDirectiveModule} from "@hpe/angular-toolkit/gui/directive";

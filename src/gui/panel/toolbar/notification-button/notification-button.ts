@@ -8,7 +8,7 @@
 
 import {Component, OnDestroy} from '@angular/core';
 import {Subscription}         from "rxjs";
-import {MessageService}       from 'primeng/components/common/messageservice';
+import {MessageService}       from "primeng";
 
 //=============================================================================
 

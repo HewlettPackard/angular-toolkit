@@ -7,7 +7,7 @@
 //=============================================================================
 
 import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
-import {OverlayPanel} from "primeng/primeng";
+import {OverlayPanel} from "primeng";
 
 //=============================================================================
 
