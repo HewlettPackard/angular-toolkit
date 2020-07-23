@@ -57,6 +57,12 @@ export class LabelService {
 	//---
 	//-------------------------------------------------------------------------
 
+	public getLanguage() : string {
+		return this.language;
+	}
+
+	//-------------------------------------------------------------------------
+
 	public setLanguage(language : string) : void {
 		this.language = language;
 	}

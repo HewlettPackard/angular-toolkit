@@ -22,13 +22,13 @@
 
 //=============================================================================
 
-.required,.required:focus {
+.required, .required:focus {
 	border-right: 5px solid $formMandatoryColor;
 }
 
 //=============================================================================
 
-.provided,.provided:focus {
+.provided, .provided:focus {
 	border-right: 5px solid $formProvidedColor;
 }
 

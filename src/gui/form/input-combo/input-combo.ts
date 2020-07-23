@@ -8,6 +8,7 @@
 
 import {Component, Input}      from '@angular/core';
 import {NG_VALUE_ACCESSOR}     from '@angular/forms';
+import {SelectItem}            from "primeng/api";
 import {AbstractFormComponent} from "../abstract-form-component";
 
 //=============================================================================
@@ -33,10 +34,7 @@ export class InputCombo extends AbstractFormComponent {
 	//---
 	//-------------------------------------------------------------------------
 
-	@Input() key   : string;
-	@Input() value : string;
-
-	data  : any[];
+	@Input() data : SelectItem[];
 
 	//-------------------------------------------------------------------------
 
@@ -69,15 +67,13 @@ export class InputCombo extends AbstractFormComponent {
 	set dataMap(map : Object) {
 
 		this._dataMap = map;
-		this.key      = "id";
-		this.value    = "value";
 
 		let list = [];
 
 		if ( ! this.required) {
-			list.push( {
-				"id"    : null,
-				"value" : null
+			list.push({
+				"value" : null,
+				"label" : null
 			});
 		}
 
@@ -90,40 +86,23 @@ export class InputCombo extends AbstractFormComponent {
 			}
 
 			list.push( {
-				"id"    : name,
-				"value" : value
+				"value" : name,
+				"label" : value
 			});
 		}
 
 		this.data = list;
-		console.log("set data: "+ JSON.stringify(list));
 	}
 
 	//-------------------------------------------------------------------------
 
-	public writeValue(keyValue) {
-
-		console.log("writeValue: "+ JSON.stringify(keyValue));
-
-		let item = this.data.find( (item) => {
-			return (item[this.key] == keyValue)
-		});
-
-		//--- Select first entry in case there is no match
-
-		if (item == null) {
-			if (this.data != null && this.data.length > 0) {
-				item = this.data[0];
-			}
-		}
-
-		this._selectedItem = item;
+	public writeValue(value : Object) {
+		this._selectedItem = value;
 	}
 
 	//-------------------------------------------------------------------------
 
 	get selectedItem() : Object {
-		console.log("get selectedItem: "+ JSON.stringify(this._selectedItem));
 		return this._selectedItem;
 	}
 
@@ -131,10 +110,8 @@ export class InputCombo extends AbstractFormComponent {
 
 	set selectedItem(newItem : Object) {
 
-		console.log("set selectedItem: "+ JSON.stringify(newItem));
-
 		this._selectedItem = newItem;
-		this.onChange(newItem[this.key]);
+		this.onChange(newItem);
 	}
 
 	//-------------------------------------------------------------------------
@@ -144,7 +121,7 @@ export class InputCombo extends AbstractFormComponent {
 	//-------------------------------------------------------------------------
 
 	protected isProvided() : boolean {
-	 	return (this.selectedItem != null && this.selectedItem[this.key] != null);
+	 	return (this._selectedItem != null);
 	}
 }
 

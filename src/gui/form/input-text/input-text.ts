@@ -66,9 +66,11 @@ export class InputText extends AbstractFormComponent {
 	//-------------------------------------------------------------------------
 
 	set value(newValue) {
+
 		if(newValue==""){
             newValue=null;
         }
+
 		this._value = newValue;
 		this.onChange(newValue);
 	}
